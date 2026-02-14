@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.a27100057_emotilog.FirstFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/entries"
         tools:layout="@layout/fragment_first">
 
         <action
@@ -18,11 +18,27 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.a27100057_emotilog.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/logs"
         tools:layout="@layout/fragment_second">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+
+        <action
+            android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.a27100057_emotilog.ThirdFragment"
+        android:label="@string/summary"
+        tools:layout="@layout/fragment_third">
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
