@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Row 1 -->
+
+        <Button
+            android:id="@+id/happy_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Happy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sad_button"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/sad_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sad"
+            app:layout_constraintStart_toEndOf="@id/happy_button"
+            app:layout_constraintEnd_toStartOf="@id/excited_button"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/excited_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Excited"
+            app:layout_constraintStart_toEndOf="@id/sad_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- Row 2 -->
+
+        <Button
+            android:id="@+id/grateful_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Grateful"
+            app:layout_constraintTop_toBottomOf="@id/happy_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/angry_button"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/angry_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Angry"
+            app:layout_constraintTop_toBottomOf="@id/sad_button"
+            app:layout_constraintStart_toEndOf="@id/grateful_button"
+            app:layout_constraintEnd_toStartOf="@id/disgusted_button"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/disgusted_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Disgusted"
+            app:layout_constraintTop_toBottomOf="@id/excited_button"
+            app:layout_constraintStart_toEndOf="@id/angry_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- NEXT BUTTON -->
+
+        <Button
+            android:id="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/grateful_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
